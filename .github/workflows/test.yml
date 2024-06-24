@@ -26,4 +26,4 @@ jobs:
       - uses: "JohannesK71083/actions_compose_test@main"
         with:
           prerelease: ${{ inputs.prerelease }}
-          mode: ${{ inputs.release-type == "major version" && 'major' ||  inputs.release-type == "minor version" && 'minor' ||  inputs.release-type == "no new version (prerelease required)" && 'pre' || "else" }}
+          mode: ${{ inputs.release-type == 'major version' && 'major' ||  inputs.release-type == 'minor version' && 'minor' ||  inputs.release-type == 'no new version (prerelease required)' && 'pre' || 'else' }}
