@@ -6,6 +6,10 @@ on:
       version:
         type: string
         required: true
+      prerelease:
+        type: boolean
+        required: true
+        default: false
 jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
