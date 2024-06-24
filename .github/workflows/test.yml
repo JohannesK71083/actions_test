@@ -3,19 +3,9 @@ run-name: ${{ github.actor }} is testing
 on:
   workflow_dispatch:
     inputs:
-      name:
-        type: choice
-        description: Who to greet
-        options: 
-        - monalisa
-        - cschleiden
-      message:
+      version:
+        type: string
         required: true
-      use-emoji:
-        type: boolean
-        description: Include 🎉🤣 emojis
-      environment:
-        type: environment
 jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
@@ -25,6 +15,9 @@ jobs:
           TEST=1
           echo $TEST
           echo "TEST=$TEST" >> "$GITHUB_ENV"
+          echo $TEST2
+        env:
+          TEST2: ${{ inputs.version }}
       - run: "echo $TEST"
   JOB-2:
     runs-on: ubuntu-latest
