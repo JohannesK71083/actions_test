@@ -1,6 +1,10 @@
 name: Test
 run-name: ${{ github.actor }} is testing
-on: [push, workflow_dispatch]
+on: [workflow_dispatch]
+inputs:
+  who-to-greet:  # id of input
+    description: 'Who to greet'
+    required: true
 jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
