@@ -11,7 +11,7 @@ on:
           - major version
           - minor version
           - no new version
-        default: "no new version"
+        default: ""
       prerelease:
         required: true
         type: boolean
