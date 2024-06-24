@@ -5,4 +5,4 @@ jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
     steps:
-      - uses: JohannesK71083/actions_compose_test@master
+      - uses: JohannesK71083/actions_compose_test@main
