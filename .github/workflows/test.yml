@@ -24,3 +24,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: "JohannesK71083/actions_compose_test@main"
+        with:
+          prerelease: ${{ inputs.prerelease }}
+          mode: ${{ inputs.mode }}
