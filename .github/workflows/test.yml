@@ -10,8 +10,8 @@ on:
         options:
           - major version
           - minor version
-          - no new version
-        default: "no new version"
+          - no new version (prerelease required)
+        default: "no new version (prerelease required)"
       prerelease:
         required: true
         type: boolean
