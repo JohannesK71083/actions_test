@@ -3,13 +3,18 @@ run-name: ${{ github.actor }} is testing
 on:
   workflow_dispatch:
     inputs:
-      version:
-        type: string
+      release-type:
+        description: "release type"
         required: true
+        type: choice
+        options:
+          - major version
+          - minor version
+          - no new version
       prerelease:
-        type: boolean
         required: true
-        default: false
+        type: boolean
+        
 jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
