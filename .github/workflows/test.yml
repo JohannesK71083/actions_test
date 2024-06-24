@@ -26,4 +26,8 @@ jobs:
           echo $TEST
           echo "TEST=$TEST" >> "$GITHUB_ENV"
       - run: "echo $TEST"
+  JOB-2:
+    runs-on: ubuntu-latest
+    steps:
+      - run: "echo $TEST"
  
