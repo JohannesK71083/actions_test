@@ -7,7 +7,7 @@ jobs:
     steps:
       - uses: "JohannesK71083/actions_compose_test@main"
       - run: |
-      TEST=1 \
-      echo $TEST
+        TEST=1 \
+        echo $TEST
       - run: "echo $TEST"
  
