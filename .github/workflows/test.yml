@@ -15,6 +15,7 @@ on:
       prerelease:
         required: true
         type: boolean
+        default: true
         
 jobs:
   releaser:
