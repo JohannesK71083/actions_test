@@ -6,4 +6,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: "JohannesK71083/actions_compose_test@main"
+      - run: "TEST=1"
+      - run: "echo $TEST"
  
