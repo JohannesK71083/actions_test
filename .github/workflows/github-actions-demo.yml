@@ -31,4 +31,4 @@ jobs:
         run: |
           echo "$in"
         env:
-          in: ${{ env.Test3 }}
+          in: ${{ env.TEST3 }}
