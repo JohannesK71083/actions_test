@@ -19,3 +19,11 @@ jobs:
           echo "$Test"
           echo "$Test2"
           echo "$Test3"
+      - name: "3"
+        run: |
+          echo "$Test2"
+        env:
+          Test2: "T2m"
+      - name: "4":
+        run: |
+          echo "$Test2"
