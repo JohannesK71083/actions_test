@@ -24,6 +24,6 @@ jobs:
           echo "$Test2"
         env:
           Test2: "T2m"
-      - name: "4":
+      - name: "4"
         run: |
           echo "$Test2"
