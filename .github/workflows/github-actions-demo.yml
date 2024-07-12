@@ -27,3 +27,8 @@ jobs:
       - name: "4"
         run: |
           echo "$Test2"
+      - name: "5"
+        run: |
+          echo "$in"
+        env:
+          in: "{{ env.Test3 }}"
