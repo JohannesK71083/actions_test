@@ -15,7 +15,7 @@ jobs:
           Test: "T"
           Test2: "T2"
       - name: "2"
-        run:
+        run: |
           echo "$Test"
           echo "$Test2"
           echo "$Test3"
