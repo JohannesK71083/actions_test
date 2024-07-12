@@ -23,6 +23,7 @@ jobs:
     steps:
       - uses: "JohannesK71083/actions_compose_test@main"
         with:
-          prerelease: ${{ inputs.prerelease }}
           mode: ${{ inputs.release-type == 'major version' && 'major' ||  inputs.release-type == 'minor version' && 'minor' ||  inputs.release-type == 'no new version (prerelease required)' && 'pre' || 'else' }}
+          prerelease: ${{ inputs.prerelease }}
+          tag_format: "V{Maj}.{Min}[_pre-{Pre}]"
           reuse_old_body: ${{ true }}
