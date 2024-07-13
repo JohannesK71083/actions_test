@@ -30,5 +30,6 @@ jobs:
           mode: ${{ inputs.release-type == 'major version' && 'major' ||  inputs.release-type == 'minor version' && 'minor' ||  inputs.release-type == 'no new version (prerelease required)' && 'pre' || 'else' }}
           prerelease: ${{ inputs.prerelease }}
           tag_format: "V{Maj}.{Min}[_pre-{Pre}]"
+          title_format: "Versionnn {Maj}.{Min}[ pre-{Pre}]"
           ignore_drafts: ${{ inputs.ignore_drafts }}
           reuse_old_body: ${{ true }}
