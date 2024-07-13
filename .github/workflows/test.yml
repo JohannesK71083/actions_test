@@ -16,6 +16,10 @@ on:
         required: true
         type: boolean
         default: true
+      ignore_drafts:
+        required: true
+        type: boolean
+        default: true
         
 jobs:
   releaser:
@@ -26,4 +30,5 @@ jobs:
           mode: ${{ inputs.release-type == 'major version' && 'major' ||  inputs.release-type == 'minor version' && 'minor' ||  inputs.release-type == 'no new version (prerelease required)' && 'pre' || 'else' }}
           prerelease: ${{ inputs.prerelease }}
           tag_format: "V{Maj}.{Min}[_pre-{Pre}]"
+          ignore_drafts: ${{ inputs.ignore_drafts }}
           reuse_old_body: ${{ true }}
