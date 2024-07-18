@@ -10,7 +10,8 @@ jobs:
           path: main
       - name: "1"
         run: |
-          "ls ${{ github.workspace }}/main"
+          "ls -Al ${{ github.workspace }}"
+          "ls -Al ${{ github.workspace }}/main"
           "python ${{ github.workspace }}/main/test.py"
       - name: "2"
         run: |
