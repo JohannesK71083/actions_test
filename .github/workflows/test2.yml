@@ -1,0 +1,16 @@
+name: Test2
+on: [workflow_dispatch]
+jobs:
+  Test2:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          path: main
+      - name: "1"
+        run: |
+          "python ${{ github.workspace }}/main/test.py"
+      - name: "2"
+        run: |
+          echo "$TEST1"
