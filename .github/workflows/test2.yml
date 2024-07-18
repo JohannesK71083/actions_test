@@ -10,7 +10,10 @@ jobs:
           path: main
       - name: "1"
         run: |
-          python -u test.py
+          pwd
+          ls -Al
+          ls -Al "${{ github.workspace }}"
+          python -u main/test.py
       - name: "2"
         run: |
           echo "$TEST1"
