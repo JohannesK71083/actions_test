@@ -10,7 +10,7 @@ jobs:
           path: main
       - name: "1"
         run: |
-          "python test.py"
+          python -u test.py
       - name: "2"
         run: |
           echo "$TEST1"
