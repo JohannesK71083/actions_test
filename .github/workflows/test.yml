@@ -33,4 +33,4 @@ jobs:
           title_format: "Version {Maj}.{Min}[ pre-{Pre}]"
           ignore_drafts: ${{ inputs.ignore_drafts }}
           reuse_old_body: ${{ true }}
-          full_source_code_name: "source_full"
+          full_source_code_filename: "source_full"
