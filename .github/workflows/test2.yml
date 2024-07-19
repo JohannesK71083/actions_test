@@ -6,4 +6,4 @@ jobs:
     steps:
       - name: "1"
         run: |
-          echo "::notice title=[Test](https://github.com/JohannesK71083/actions_test/releases/tag/untagged-49c85d6c3f8c7746149d)"
+          echo "::notice ::[Test](https://github.com/JohannesK71083/actions_test/releases/tag/untagged-49c85d6c3f8c7746149d)"
