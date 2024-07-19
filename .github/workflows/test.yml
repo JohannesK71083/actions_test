@@ -32,5 +32,6 @@ jobs:
           tag_format: "V{Maj}.{Min}[_pre-{Pre}]"
           title_format: "Version {Maj}.{Min}[ pre-{Pre}]"
           ignore_drafts: ${{ inputs.ignore_drafts }}
+          version_text_repo_file: "/version.txt"
           reuse_old_body: ${{ true }}
           full_source_code_filename: "source_full"
