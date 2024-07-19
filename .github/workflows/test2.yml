@@ -4,16 +4,6 @@ jobs:
   Test2:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-        with:
-          path: main
       - name: "1"
         run: |
-          pwd
-          ls -Al
-          ls -Al "${{ github.workspace }}"
-          python -u main/test.py
-      - name: "2"
-        run: |
-          echo "$TEST1"
+          echo "::notice title=[Test](https://github.com/JohannesK71083/actions_test/releases/tag/untagged-49c85d6c3f8c7746149d)"
