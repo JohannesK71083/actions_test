@@ -4,6 +4,19 @@ jobs:
   Test2:
     runs-on: ubuntu-latest
     steps:
-      - name: "1"
-        run: |
-          fdfffgg
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          path: "${{ github.workspace }}/checkout"
+
+      - name: Git-archive-all
+        uses: JohannesK71083/git-archive-all-action@main
+        with:
+          output-files: "${{ github.workspace }}/test.zip"
+          base-repo: "${{ github.workspace }}/checkout"
+          prefix: "/"
+      - name: Upload artifact for deployment job
+        uses: actions/upload-artifact@v2
+        with:
+          name: test
+          path: "${{ github.workspace }}/test.zip"
