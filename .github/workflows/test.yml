@@ -37,3 +37,4 @@ jobs:
           full_source_code_filename: "source_full"
           reuse_old_files: "test.txt\nrequirements.txt"
           vsdx_files: "test.vsdx"
+          vsdx_output_filenames: "test.pdf"
