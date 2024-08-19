@@ -1,6 +1,6 @@
 start
 
-> [!NOTE] \
+> [!NOTE]\
 > test
 
 break
