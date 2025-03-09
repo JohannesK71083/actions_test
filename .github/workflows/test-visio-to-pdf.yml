@@ -1,5 +1,12 @@
 name: Test Visio to PDF
-on: [workflow_dispatch]
+on:
+  workflow_dispatch:
+    inputs:
+      visio_to_pdf_action_show_logs:
+        required: true
+        type: boolean
+        default: false
+
 jobs:
   Visio_to_PDF:
     runs-on: ubuntu-latest
@@ -19,7 +26,7 @@ jobs:
         with:
           input-file-path: "repo/test.vsdx"
           output-file-path: "test.pdf"
-          show-logs: "false"
+          show-logs: ${{ inputs.visio_to_pdf_action_show_logs }}
       - name: Upload PDF
         uses: actions/upload-artifact@v4
         with:
