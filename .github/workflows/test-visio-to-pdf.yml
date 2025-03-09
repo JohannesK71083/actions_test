@@ -3,6 +3,7 @@ on:
   workflow_dispatch:
     inputs:
       visio_to_pdf_action_show_logs:
+        description: "Activate logs of visio_to_pdf_action"
         required: true
         type: boolean
         default: false
