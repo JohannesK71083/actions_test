@@ -12,23 +12,23 @@ jobs:
   Visio_to_PDF:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout repo
         uses: actions/checkout@v4
         with:
           path: repo
-      - name: Get composite run steps repository
+      - name: Checkout visio_to_pdf_action
         uses: actions/checkout@v3
         with:
           repository: "JohannesK71083/visio_to_pdf_action"
           ssh-key: ${{ secrets.VISIO_TO_PDF_ACTION_SSH_KEY }}
           path: visio_to_pdf_action
-      - name: Visio_to_PDF
+      - name: execute visio_to_pdf_action
         uses: "./visio_to_pdf_action"
         with:
           input-file-path: "repo/test.vsdx"
           output-file-path: "test.pdf"
           show-logs: ${{ inputs.visio_to_pdf_action_show_logs }}
-      - name: Upload PDF
+      - name: Upload output PDF as artifact
         uses: actions/upload-artifact@v4
         with:
           name: test
