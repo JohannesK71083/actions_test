@@ -8,8 +8,14 @@ jobs:
         uses: actions/checkout@v4
         with:
           path: repo
+      - name: Get composite run steps repository
+        uses: actions/checkout@v3
+        with:
+          repository: "JohannesK71083/visio_to_pdf_action"
+          ssh-key: ${{ secrets.VISIO_TO_PDF_ACTION_SSH_KEY }}
+          path: visio_to_pdf_action
       - name: Visio_to_PDF
-        uses: "JohannesK71083/visio_to_pdf_action@main"
+        uses: "./visio_to_pdf_action"
         with:
           input-file-path: "repo/test.vsdx"
           output-file-path: "test.pdf"
