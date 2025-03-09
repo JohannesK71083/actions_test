@@ -19,7 +19,7 @@ jobs:
         with:
           input-file-path: "repo/test.vsdx"
           output-file-path: "test.pdf"
-          show-logs: "true"
+          show-logs: "false"
       - name: Upload PDF
         uses: actions/upload-artifact@v4
         with:
