@@ -1,0 +1,23 @@
+name: Debug Pyinstaller with IT-CodeForge/GUIBuilder
+on: workflow_dispatch
+
+jobs:
+  Pyinstaller:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          repository: "IT-CodeForge/GUIBuilder"
+          path: repo
+      - name: exec
+        shell: cmd
+        run: |
+          pip install -r "repo\\requirements.txt"
+          pip install pyinstaller
+          pyinstaller --noconfirm --onefile --windowed --icon "%cd%\\repo\\favicon.ico" --name "GUI-Builder" --add-data "%cd%\\repo\\additional_files;additional_files/"  "%cd%\\repo\\src\\main.py"
+      - name: Upload output PDF as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: test
+          path: dist/GUI-Builder.exe
