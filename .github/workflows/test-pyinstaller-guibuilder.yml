@@ -14,7 +14,7 @@ jobs:
       - name: execute pyinstaller_action
         uses: "JohannesK71083/pyinstaller_action@main"
         with:
-          python-requirements-file-path: "repo/requirements.txt"
+          python-requirements-file-path: "repo\\requirements.txt"
           input-file-path: "repo\\src\\main.py"
           onefile: "true"
           no-console: "true"
@@ -22,8 +22,6 @@ jobs:
           output-name: "test"
           additional-data: |
             ".\\repo\\additional_files;additional_files/"
-          hidden-imports: |
-            "steuerung"
       - name: Upload output PDF as artifact
         uses: actions/upload-artifact@v4
         with:
