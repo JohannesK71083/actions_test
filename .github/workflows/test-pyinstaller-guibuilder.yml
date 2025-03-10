@@ -11,6 +11,9 @@ jobs:
         with:
           repository: 'IT-CodeForge/GUIBuilder'
           path: repo
+      - name: test
+        run: |
+          ls -l repo
       - name: execute pyinstaller_action
         uses: "JohannesK71083/pyinstaller_action@main"
         with:
