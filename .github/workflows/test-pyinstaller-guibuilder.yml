@@ -18,7 +18,7 @@ jobs:
           input-file-path: "repo\\src\\main.py"
           onefile: "true"
           no-console: "true"
-          icon: "repo\\favicon.ico"
+          icon-path: "repo\\favicon.ico"
           output-name: "test"
           additional-data: |
             "D:\sync\data\1) Privat\GIT\GUIBuilder\additional_files;additional_files/"
