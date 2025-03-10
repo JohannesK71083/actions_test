@@ -13,8 +13,10 @@ jobs:
       - name: execute pyinstaller_action
         uses: "JohannesK71083/pyinstaller_action@main"
         with:
-          pyinstaller-options: "--noconfirm --onefile --console \".\\repo\\test.py\""
           python-requirements-file-path: "repo/requirements.txt"
+          input-file-path: "repo\\test.py"
+          onefile: "true"
+          no-console: "false"
       - name: Upload output PDF as artifact
         uses: actions/upload-artifact@v4
         with:
