@@ -1,0 +1,22 @@
+name: Test Pyinstaller
+on:
+  workflow_dispatch
+
+jobs:
+  Visio_to_PDF:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          path: repo
+      - name: execute pyinstaller_action
+        uses: "JohannesK71083/pyinstaller-action@main"
+        with:
+          pyinstaller-options: "pyinstaller --noconfirm --onefile --console  \"repo/main.py\""
+          python-requirements-file-path: "repo/requirements.txt"
+      - name: Upload output PDF as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: test
+          path: dist/main.exe
