@@ -21,7 +21,7 @@ jobs:
           icon-path: "repo\\favicon.ico"
           output-name: "test"
           additional-data: |
-            ".\\repo\\additional_files\\;additional_files/"
+            ".\\repo\\additional_files;additional_files/"
       - name: Upload output PDF as artifact
         uses: actions/upload-artifact@v4
         with:
