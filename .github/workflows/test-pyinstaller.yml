@@ -11,7 +11,7 @@ jobs:
         with:
           path: repo
       - name: execute pyinstaller_action
-        uses: "JohannesK71083/pyinstaller-action@main"
+        uses: "JohannesK71083/pyinstaller_action@main"
         with:
           pyinstaller-options: "pyinstaller --noconfirm --onefile --console  \"repo/main.py\""
           python-requirements-file-path: "repo/requirements.txt"
