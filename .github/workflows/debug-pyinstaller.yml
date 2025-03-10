@@ -10,6 +10,7 @@ jobs:
         with:
           repository: "IT-CodeForge/GUIBuilder"
           path: repo
+          submodules: "recursive"
       - name: exec
         shell: cmd
         run: |
