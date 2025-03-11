@@ -1,0 +1,11 @@
+name: Test Python setup
+on:
+  workflow_dispatch
+
+jobs:
+  PythonSetup:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/setup-python@v5
+        with:
+          python-version: 'latest'
