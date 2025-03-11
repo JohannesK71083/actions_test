@@ -11,6 +11,7 @@ jobs:
         with:
           repository: 'IT-CodeForge/GUIBuilder'
           path: repo
+          submodules: 'recursive'
       - name: execute pyinstaller_action
         uses: "JohannesK71083/pyinstaller_action@main"
         with:
