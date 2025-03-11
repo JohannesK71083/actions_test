@@ -11,6 +11,9 @@ jobs:
           repository: "IT-CodeForge/GUIBuilder"
           path: repo
           submodules: "recursive"
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12.4'
       - name: exec
         shell: cmd
         run: |
